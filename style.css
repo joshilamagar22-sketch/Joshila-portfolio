@@ -150,19 +150,39 @@ nav ul a:hover {
     font-weight: 700;
 }
 
-.hero h1 {
-    font-size: clamp(55px, 9vw, 105px);
+/* HERO NAME STYLING */
+.hero h1 strong {
+    display: block;
+    color: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 800;
     line-height: 1.05;
-    margin: 25px 0;
-    letter-spacing: -5px;
+    letter-spacing: -2.5px;
 }
 
 .hero h1 span {
     display: block;
+    margin-top: 28px;      /* <-- Controls the gap below "Joshila Thapa." */
+    margin-bottom: 12px;   /* <-- Optional gap above "Computer Engineering Student..." */
     color: var(--accent);
     font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(22px, 2.8vw, 34px);
     font-style: italic;
     font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+@media (max-width: 700px) {
+    .hero h1 strong {
+        font-size: clamp(36px, 9vw, 48px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero h1 span {
+        font-size: clamp(20px, 5.5vw, 26px);
+    }
 }
 
 .hero h2 {
@@ -174,7 +194,7 @@ nav ul a:hover {
 .hero-description {
     max-width: 550px;
     color: var(--muted);
-    line-height: 1.9;
+    line-height: 1.2;
 }
 
 .hero-buttons {
