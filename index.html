@@ -8,9 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+
 <title>Joshila Thapa | Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -21,6 +27,12 @@
 <header>
 <nav>
 <a href="#" class="logo">JT.</a>
+<button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
 
 <ul>
 <li><a href="#about">About</a></li>
@@ -33,57 +45,49 @@
 
 <main>
 
-<section class="hero" id="home">
+
+<section class="hero reveal" id="home">
 
     <div class="hero-content">
+        <p class="eyebrow reveal">HELLO, I'M JOSHILA ✳</p>
 
-        <p class="eyebrow">HELLO, I'M JOSHILA ✳</p>
-
-        <h1>
-            Creating with
-            <span>curiosity.</span>
-        </h1>
+        <h1>Creating with <span>curiosity.</span></h1>
 
         <h2>Computer Engineering Student</h2>
 
-        <p class="hero-description">
+        <p class="hero-description reveal">
             I explore technology, experiment with creative ideas,
             and build digital experiences that bring imagination to life.
         </p>
 
-        <div class="hero-buttons">
-            <a href="#projects" class="primary-btn">
-                Explore My Work ↗
-            </a>
-
-            <a href="#about" class="secondary-btn">
-                More About Me
-            </a>
+        <div class="hero-buttons reveal">
+            <a href="#projects" class="primary-btn">Explore My Work ↗</a>
+            <a href="#about" class="secondary-btn">More About Me</a>
         </div>
-
     </div>
 
-    <div class="hero-decoration">
-        <span>✳</span>
-        <p>THINK. CREATE. EXPLORE.</p>
+    <div class="hero-photo reveal">
+        <img src="assets/profile.jpg" alt="Portrait of Joshila Thapa">
+        <div class="photo-caption">A MIND FULL OF IDEAS ✳</div>
     </div>
 
 </section>
 
 
-<section class="about" id="about">
 
-    <div class="about-heading">
-        <p class="eyebrow">A LITTLE INTRODUCTION</p>
+<section class="about reveal" id="about">
+
+    <div class="about-heading reveal">
+        <p class="eyebrow reveal">A LITTLE INTRODUCTION</p>
         <h2>Curious mind.<br>
             <span>Creative soul.</span>
         </h2>
     </div>
 
-    <div class="about-content">
+    <div class="about-content reveal">
 
-        <div class="about-main">
-            <p class="about-lead">
+        <div class="about-main reveal">
+            <p class="about-lead reveal">
                 Hi, I'm Joshila Thapa — a Computer Engineering
                 student who loves exploring how technology works
                 and what we can create with it.
@@ -103,7 +107,7 @@
             </p>
         </div>
 
-        <div class="about-card">
+        <div class="about-card reveal">
             <span class="about-symbol">✳</span>
 
             <h3>Currently exploring</h3>
@@ -122,17 +126,171 @@
 </section>
 
 
-<section id="skills">
-<h2>My Skills</h2>
+
+<section class="skills reveal" id="skills">
+    <div class="skills-heading reveal">
+        <p class="eyebrow reveal">WHAT I WORK WITH</p>
+        <h2>My <span>toolkit.</span></h2>
+        <p>
+            Technologies and tools I'm learning, exploring,
+            and using to turn ideas into practical projects.
+        </p>
+    </div>
+
+    <div class="skills-grid reveal">
+
+        <div class="skill-card">
+            <span class="skill-number ">01</span>
+            <h3>Programming</h3>
+            <p>Java · C · JavaScript</p>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">02</span>
+            <h3>Web Development</h3>
+            <p>HTML · CSS · JavaScript</p>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">03</span>
+            <h3>Creative Technology</h3>
+            <p>Computer Graphics · UI Design</p>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">04</span>
+            <h3>Hardware & Robotics</h3>
+            <p>Arduino · Sensors · Wokwi</p>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">05</span>
+            <h3>Tools</h3>
+            <p>VS Code · Git · GitHub · IntelliJ</p>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">06</span>
+            <h3>Currently Learning</h3>
+            <p>DSA · Backend Development · Robotics</p>
+        </div>
+
+    </div>
 </section>
 
-<section id="projects">
-<h2>My Projects</h2>
+
+
+<section class="projects reveal" id="projects">
+
+    <div class="projects-heading reveal">
+        <p class="eyebrow">A SELECTION OF MY WORK</p>
+        <h2>Things I've <span>created.</span></h2>
+        <p>
+            A collection of projects where I experiment,
+            learn, and turn ideas into working solutions.
+        </p>
+    </div>
+
+    <div class="projects-grid reveal">
+
+        <!-- PROJECT 1 -->
+        <article class="project-card reveal">
+            <div class="project-image">
+    <span class="project-category">01 / WEB DEVELOPMENT</span>
+    <h3>VoteAI</h3>
+</div>
+            <div class="project-info ">
+                <h3>VoteAI</h3>
+                <p>
+                    A team-based voting platform with an AI chatbot.
+                    My contribution focused on frontend development.
+                </p>
+
+                <div class="project-tags">
+                    <span>React</span>
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                </div>
+
+                <a href="YOUR_VOTEAI_GITHUB_LINK"
+                   target="_blank" class="project-link">
+                    View Project ↗
+                </a>
+            </div>
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="project-card reveal">
+           <div class="project-image">
+    <span class="project-category">02 / ROBOTICS</span>
+    <h3>Smart Door</h3>
+</div>
+
+            <div class="project-info">
+                <h3>Smart Door Security System</h3>
+                <p>
+                    An Arduino-based prototype using distance
+                    detection and servo motor control.
+                </p>
+
+                <div class="project-tags">
+                    <span>Arduino</span>
+                    <span>Ultrasonic Sensor</span>
+                    <span>Servo</span>
+                </div>
+
+                <a href="YOUR_SMART_DOOR_GITHUB_LINK"
+                   target="_blank" class="project-link">
+                    View Project ↗
+                </a>
+            </div>
+        </article>
+
+    </div>
 </section>
 
-<section id="contact">
-<h2>Let's Connect</h2>
+
+<section class="contact reveal" id="contact">
+
+    <div class="contact-content">
+        <p class="eyebrow">LET'S CONNECT</p>
+
+        <h2>Have an idea?<br>
+            <span>Let's talk.</span>
+        </h2>
+
+        <p class="contact-description">
+            I'm always interested in exploring new ideas,
+            collaborating on creative projects, and connecting
+            with people who love building things.
+        </p>
+
+        <a href="mailto:your-email@example.com" class="contact-button">
+            Say Hello ↗
+        </a>
+    </div>
+
+    <div class="contact-links">
+        <a href="https://github.com/joshilamagar22-sketch" target="_blank">
+            GitHub ↗
+        </a>
+
+        <a href="https://www.linkedin.com/in/joshila-thapa-59a62a344/" target="_blank">
+            LinkedIn ↗
+        </a>
+
+        <a href="mailto:your-joshilamagar22@gmail.com">
+            Email ↗
+        </a>
+    </div>
+
 </section>
+
+<footer class="footer">
+    <p>© 2026 Joshila Thapa. Made with curiosity.</p>
+    <a href="#home">Back to top ↑</a>
+</footer>
+
 </main>
 
 <script src="script.js"></script>
