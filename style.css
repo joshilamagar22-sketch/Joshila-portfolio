@@ -89,3 +89,100 @@ section h2 {
 color: #E66F9D;
 margin-bottom: 25px;
 }
+
+.hero {
+    min-height: 85vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: #E66F9D;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 9vw, 105px);
+    line-height: 1.05;
+    margin: 25px 0;
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #F28AB2;
+    font-style: italic;
+}
+
+.hero h2 {
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.hero-description {
+    max-width: 550px;
+    color: #827780;
+    line-height: 1.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.primary-btn {
+    background: #F28AB2;
+    color: #292329;
+}
+
+.secondary-btn {
+    border: 1px solid #E9B5C9;
+    color: #292329;
+}
+
+.hero-decoration {
+    position: absolute;
+    right: 8%;
+    bottom: 15%;
+    color: #F28AB2;
+    text-align: center;
+}
+
+.hero-decoration span {
+    font-size: 100px;
+}
+
+.hero-decoration p {
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 700px) {
+    .hero-decoration {
+        display: none;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+}
