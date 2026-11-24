@@ -1,19 +1,40 @@
 
 
-// Mobile navigation
+// MOBILE NAVIGATION
 
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
-menuToggle.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("show");
+if (menuToggle && navLinks) {
 
-    menuToggle.setAttribute("aria-expanded", isOpen);
-    menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu"
-    );
-});
+    menuToggle.addEventListener("click", () => {
+
+        const isOpen = navLinks.classList.toggle("show");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+
+    });
+
+    // Close menu when a link is clicked
+
+    navLinks.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+        });
+
+    });
+}
 
 // Close menu after clicking a navigation link
 

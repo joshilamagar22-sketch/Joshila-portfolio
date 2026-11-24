@@ -855,3 +855,114 @@ nav ul a:hover {
     }
 }
 
+/* ==============================
+   MOBILE MENU FIX
+============================== */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 7px 0;
+    background: var(--navy);
+    transition: 0.3s;
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        position: relative;
+        z-index: 1000;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul#nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: var(--background);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        flex-direction: column;
+        gap: 22px;
+        box-shadow: 0 12px 25px rgba(37, 54, 74, 0.12);
+        z-index: 1000;
+    }
+
+    nav ul#nav-links.show {
+        display: flex;
+    }
+
+    nav ul#nav-links a {
+        display: block;
+        font-size: 16px;
+        color: var(--navy);
+    }
+}
+
+/* ==============================
+   MOBILE HERO LAYOUT FIX
+============================== */
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding: 65px 7% 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 45px;
+        overflow: visible;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 0;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
+
+    .hero-photo {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+
+        animation: none;
+
+        margin: 0 auto 25px;
+        width: min(75%, 260px);
+        height: 320px;
+        flex-shrink: 0;
+    }
+
+    .photo-caption {
+        bottom: -35px;
+    }
+}
